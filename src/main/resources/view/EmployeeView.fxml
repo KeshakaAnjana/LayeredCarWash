@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.EmployeeController">
+    <children>
+        <VBox layoutX="-1.0" prefHeight="701.0" prefWidth="890.0" style="-fx-background-color: #fff;">
+            <children>
+                <Label prefHeight="66.0" prefWidth="887.0" text="                Wash &amp; Go               " textFill="#2060ae" underline="true">
+                    <font>
+                        <Font name="Bodoni MT Black" size="55.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="182.0" prefWidth="890.0">
+                    <children>
+                        <HBox prefHeight="37.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="34.0" prefWidth="130.0" text="  Employee Id" />
+                                <Label fx:id="lblEmployeeId" prefHeight="41.0" prefWidth="517.0" text="1" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="129.0" text="  Name" />
+                        <TextField fx:id="txtName" prefHeight="36.0" prefWidth="749.0" promptText="Enter Name" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="130.0" text="  Salary" />
+                                <TextField fx:id="txtSalary" prefHeight="36.0" prefWidth="749.0" promptText="Salary" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                            </children>
+                        </HBox>
+                  <HBox prefHeight="42.0" prefWidth="890.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="131.0" text="  Job" />
+                        <ComboBox fx:id="cmbJob" onAction="#clickcmbJob" prefHeight="34.0" prefWidth="330.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                        <Label prefHeight="41.0" prefWidth="175.0" text="                      Service Type Id" />
+                        <Label fx:id="JobId" prefHeight="36.0" prefWidth="210.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text=" Job Id" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="890.0" spacing="30.0">
+                    <children>
+                        <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnDeleteEmployee" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteEmployeeOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnUpdateEmployee" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateEmployeeOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnSaveEmployee" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveEmployeeOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="30.0" layoutY="200.0" prefHeight="72.0" prefWidth="890.0" spacing="30.0">
+                    <children>
+                        <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#generateAllEmployeeReportOnAction" prefHeight="31.0" prefWidth="874.0" style="-fx-background-color: #4ea8f7;" text="Generate All Employee Report" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="tblEmployee" onMouseClicked="#onClicktable" prefHeight="322.0" prefWidth="890.0">
+                    <columns>
+                        <TableColumn fx:id="colEmployeeId" prefWidth="173.60000002384186" text="Employee Id" />
+                        <TableColumn fx:id="colName" prefWidth="198.4000244140625" text="Name" />
+                        <TableColumn fx:id="colSalary" prefWidth="216.80001831054688" text="Salary" />
+                  <TableColumn fx:id="colJob" prefWidth="298.4" text="Job" />
+                    </columns>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+                </TableView>
+            </children>
+        </VBox>
+      <Button fx:id="btnBack" layoutX="8.0" layoutY="718.0" mnemonicParsing="false" onAction="#clickBackbtn" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView disable="true" fitHeight="554.0" fitWidth="627.0" layoutX="134.0" layoutY="94.0" opacity="0.11">
+         <image>
+            <Image url="@../images/images%20(2).jpg" />
+         </image>
+      </ImageView>
+    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

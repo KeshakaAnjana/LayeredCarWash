@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.BookingController">
+   <children>
+      <VBox layoutX="8.0" layoutY="6.0" prefHeight="707.0" prefWidth="874.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label prefHeight="94.0" prefWidth="874.0" text="                Wash &amp; Go              " textFill="#2060ae" underline="true">
+               <font>
+                  <Font name="Bodoni MT Black" size="55.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="198.0" prefWidth="874.0">
+               <children>
+                  <HBox prefHeight="37.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="130.0" text="  Booking Id" />
+                        <Label fx:id="lblbookingId" prefHeight="41.0" prefWidth="517.0" text="1" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="129.0" text="  Date" />
+                        <Label fx:id="bookingDate" prefHeight="46.0" prefWidth="726.0" text="2099-01-01" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="130.0" text="  Time" />
+                        <Label fx:id="bookingTime" prefHeight="39.0" prefWidth="726.0" text="12.00" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="128.0" text="  Customer Id" />
+                        <ComboBox fx:id="cmbCustomerId" onAction="#clickcmbCustomerId" prefHeight="34.0" prefWidth="248.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                        <Label prefHeight="36.0" prefWidth="214.0" text="                               customer name" />
+                        <Label fx:id="customername" prefHeight="35.0" prefWidth="288.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text=" name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="874.0">
+                     <children>
+                        <Label prefHeight="43.0" prefWidth="126.0" text=" Service Type Name" />
+                        <ComboBox fx:id="cmbServiceTypeName" onAction="#clickcmbServiceTypeName" prefHeight="34.0" prefWidth="251.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                        <Label prefHeight="34.0" prefWidth="214.0" text="                               Service Id" />
+                        <Label fx:id="ServiceId" prefHeight="35.0" prefWidth="288.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text=" Id" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="71.0" prefWidth="874.0" spacing="30.0">
+               <children>
+                  <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnDeleteBooking" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteBookingOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnUpdateBooking" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateBookingOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnSaveBooking" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveBookingOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tblBooking" onMouseClicked="#onClicktable" prefHeight="303.0" prefWidth="847.0">
+              <columns>
+                <TableColumn fx:id="colBookingId" prefWidth="166.39999961853027" text="Booking Id" />
+                <TableColumn fx:id="colDate" prefWidth="187.19998168945312" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="178.39999389648438" text="Time" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="157.59991455078125" text="Customer Id" />
+                  <TableColumn fx:id="colServiceId" prefWidth="183.199951171875" text="Service Id" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="btnBack" layoutX="11.0" layoutY="719.0" mnemonicParsing="false" onAction="#clickBackbtn" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView disable="true" fitHeight="750.0" fitWidth="890.0" opacity="0.15">
+         <image>
+            <Image url="@../images/images%20(5).jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BatchAnchor" prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: UX394X3HLT-eyJsaWNlbnNlSWQiOiJVWDM5NFgzSExUIiwibGljZW5zZWVOYW1lIjoiSG9uZ2lrIFVuaXZlcnNpdHntmY3snbXrjIDtlZnqtZAiLCJsaWNlbnNlZVR5cGUiOiJDTEFTU1JPT00iLCJhc3NpZ25lZU5hbWUiOiLkvJfliJvkupEg5bel5L2c5a6kIiwiYXNzaWduZWVFbWFpbCI6ImhhbmF6YXdhbWl0b0BnbWFpbC5jb20iLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJGb3IgZWR1Y2F0aW9uYWwgdXNlIG9ubHkiLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSUzAiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRNIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSU0MiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUEMiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRTIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IlJTRiIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjp0cnVlfSx7ImNvZGUiOiJSTSIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiREIiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6ZmFsc2V9LHsiY29kZSI6IkRDIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQUyIsInBhaWRVcFRvIjoiMjAyNC0xMi0xMyIsImV4dGVuZGVkIjpmYWxzZX0seyJjb2RlIjoiUlNWIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOnRydWV9LHsiY29kZSI6IldTIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOmZhbHNlfSx7ImNvZGUiOiJQU0kiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUENXTVAiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUlMiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiRFAiLCJwYWlkVXBUbyI6IjIwMjQtMTItMTMiLCJleHRlbmRlZCI6dHJ1ZX0seyJjb2RlIjoiUERCIiwicGFpZFVwVG8iOiIyMDI0LTEyLTEzIiwiZXh0ZW5kZWQiOnRydWV9XSwibWV0YWRhdGEiOiIwMTIwMjMxMjI4TFBBQTAwNDAwOCIsImhhc2giOiI1MjY4NzM4Ny8yNTMxODE0MTotMTUwNDg0MzkwMSIsImdyYWNlUGVyaW9kRGF5cyI6NywiYXV0b1Byb2xvbmdhdGVkIjpmYWxzZSwiaXNBdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJ0cmlhbCI6ZmFsc2UsImFpQWxsb3dlZCI6dHJ1ZX0=-YqDHrEIEaf/x1JqIdTI64AYA1IpRoYiqoZ/1YDnfpEqSFNJIC4er7K1hjUm9tFslnY2XoNRs04JSUG8CgNkTgIKA4xLyxGBufJYyHv26UKQmyf1nb1pM9XATb3pWSQ3h6o8/4x3jacVk3zbAuXt3uV6eEj2bCZvhGpATFmK1JVsSor+XgPr5aYePCtyymiyPOq33ghW5onzSI5LsQR5motHvLgWmjf0Mkutys3SmWt13YVcIe5yCzhlTNCZw++CAuRh2Fx/JXZhRt+kUqW2yLbkIo3kNEg2I31H8qya+RDJ09Qz7DsDkrIgODqX4Wbd2fy1C7Q1CcjjksvjhswnpNA==-MIIETDCCAjSgAwIBAgIBDzANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTIyMTAxMDE2MDU0NFoXDTI0MTAxMTE2MDU0NFowHzEdMBsGA1UEAwwUcHJvZDJ5LWZyb20tMjAyMjEwMTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/W3uCpU5M2y48rUR/3fFR6y4xj1nOm3rIuGp2brELVGzdgK2BezjnDXpAxVDw5657hBkAUMoyByiDs2MgmVi9IcqdAwpk988/Daaajq9xuU1of59jH9eQ9c3BmsEtdA4boN3VpenYKATwmpKYkJKVc07ZKoXL6kSyZuF7Jq7HoQZcclChbF75QJPGbri3cw9vDk/e46kuzfwpGftvl6+vKibpInO6Dv0ocwImDbOutyZC7E+BwpEm1TJZW4XovMBegHhWC04cJvpH1u98xoR94ichw0jKhdppywARe43rGU96163RckIuFmFDQKZV9SMUrwpQFu4Z2D5yTNqnlLRfAgMBAAGjgZkwgZYwCQYDVR0TBAIwADAdBgNVHQ4EFgQU5FZqQ4gnVc+inIeZF+o3ID+VhcEwSAYDVR0jBEEwP4AUo562SGdCEjZBvW3gubSgUouX8bOhHKQaMBgxFjAUBgNVBAMMDUpldFByb2ZpbGUgQ0GCCQDSbLGDsoN54TATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBaAwDQYJKoZIhvcNAQELBQADggIBANLG1anEKid4W87vQkqWaQTkRtFKJ2GFtBeMhvLhIyM6Cg3FdQnMZr0qr9mlV0w289pf/+M14J7S7SgsfwxMJvFbw9gZlwHvhBl24N349GuthshGO9P9eKmNPgyTJzTtw6FedXrrHV99nC7spaY84e+DqfHGYOzMJDrg8xHDYLLHk5Q2z5TlrztXMbtLhjPKrc2+ZajFFshgE5eowfkutSYxeX8uA5czFNT1ZxmDwX1KIelbqhh6XkMQFJui8v8Eo396/sN3RAQSfvBd7Syhch2vlaMP4FAB11AlMKO2x/1hoKiHBU3oU3OKRTfoUTfy1uH3T+t03k1Qkr0dqgHLxiv6QU5WrarR9tx/dapqbsSmrYapmJ7S5+ghc4FTWxXJB1cjJRh3X+gwJIHjOVW+5ZVqXTG2s2Jwi2daDt6XYeigxgL2SlQpeL5kvXNCcuSJurJVcRZFYUkzVv85XfDauqGxYqaehPcK2TzmcXOUWPfxQxLJd2TrqSiO+mseqqkNTb3ZDiYS/ZqdQoGYIUwJqXo+EDgqlmuWUhkWwCkyo4rtTZeAj+nP00v3n8JmXtO30Fip+lxpfsVR3tO1hk4Vi2kmVjXyRkW2G7D7WAVt+91ahFoSeRWlKyb4KcvGvwUaa43fWLem2hyI4di2pZdr3fcYJ3xvL5ejL3m14bKsfoOv;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.BatchController">
+    <children>
+        <VBox layoutX="-1.0" prefHeight="706.0" prefWidth="890.0" style="-fx-background-color: #fff;">
+            <children>
+                <Label prefHeight="66.0" prefWidth="892.0" text="                Wash &amp; Go               " textFill="#2060ae" underline="true">
+                    <font>
+                        <Font name="Bodoni MT Black" size="55.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="247.0" prefWidth="890.0">
+                    <children>
+                        <HBox prefHeight="54.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="34.0" prefWidth="130.0" text="  Batch Id" />
+                                <Label fx:id="lblBatchId" prefHeight="41.0" prefWidth="517.0" text="1" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="43.0" prefWidth="130.0" text="  Date" />
+                        <Label fx:id="lblBatchDate" prefHeight="43.0" prefWidth="562.0" text="2099-01-01" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="65.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="46.0" prefWidth="130.0" text="  Product Id" />
+                        <ComboBox fx:id="cmbProductId" onAction="#clickcmbProductId" prefHeight="36.0" prefWidth="202.0" style="-fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6; -fx-background-color: #ffffff;" />
+                        <Label prefHeight="42.0" prefWidth="270.0" text="                                               Product Name" />
+                        <Label fx:id="productName" prefHeight="42.0" prefWidth="264.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text=" name" />
+                            </children>
+                        </HBox>
+                  <HBox prefHeight="56.0" prefWidth="890.0">
+                     <children>
+                        <Label prefHeight="49.0" prefWidth="130.0" text="  QTY" />
+                        <Label fx:id="productQty" prefHeight="42.0" prefWidth="264.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text="  QTY" />
+                        <Label prefHeight="56.0" prefWidth="207.0" text="                           Price" />
+                        <Label fx:id="productPrice" prefHeight="42.0" prefWidth="264.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text="Price" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="890.0" spacing="30.0">
+                    <children>
+                        <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnDeleteBatch" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteBatchOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnUpdateBatch" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateBatchOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnSaveBatch" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveBatchOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="tblBatch" onMouseClicked="#onClicktable" prefHeight="322.0" prefWidth="890.0">
+                    <columns>
+                        <TableColumn fx:id="colBatchId" prefWidth="173.59996950626373" text="Batch Id" />
+                        <TableColumn fx:id="colDate" prefWidth="201.5999755859375" text="Date" />
+                        <TableColumn fx:id="colQty" prefWidth="159.20004272460938" text="QTY" />
+                  <TableColumn fx:id="colPrice" prefWidth="169.5999755859375" text="Price" />
+                  <TableColumn fx:id="colProductId" prefWidth="183.99993896484375" text="ProductId" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+      <Button fx:id="btnBack" layoutX="6.0" layoutY="714.0" mnemonicParsing="false" onAction="#clickBackbtn" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView disable="true" fitHeight="750.0" fitWidth="890.0" opacity="0.15">
+         <image>
+            <Image url="@../images/images%20(5).jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

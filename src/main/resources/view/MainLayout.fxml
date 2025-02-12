@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="750.0" minWidth="1150.0" prefHeight="557.0" prefWidth="800.0" style="-fx-background-color: #cae6ff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.MainLayoutController">
+    <children>
+        <!-- Side Menu -->
+        <VBox alignment="TOP_CENTER" prefHeight="693.0" prefWidth="245.0" spacing="50.0" style="-fx-background-color: #cae6ff;" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox maxHeight="747.0" prefHeight="694.0" prefWidth="215.0" spacing="5.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clickCustomer" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="     Customer">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="39.0">
+                           <image>
+                              <Image url="@../images/customer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickVehicle" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="       Vehicle">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="52.0" fitWidth="52.0">
+                           <image>
+                              <Image url="@../images/car.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickServiceType" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="        Service">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="41.0" fitWidth="46.0">
+                           <image>
+                              <Image url="@../images/car-wash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickBooking" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="     Booking">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="51.0">
+                           <image>
+                              <Image url="@../images/booking.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickCustomerPayment" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="CustomerPayment">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="49.0" fitWidth="56.0">
+                           <image>
+                              <Image url="@../images/smartphone.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickEmployee" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="  Employee">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="57.0">
+                           <image>
+                              <Image url="@../images/vehicle.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickSuppliers" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="   Suppliers">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="53.0">
+                           <image>
+                              <Image url="@../images/parcel.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clickProducts" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #cae6ff;" text="    Products">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="64.0">
+                           <image>
+                              <Image url="@../images/order.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- Content Area -->
+        <AnchorPane fx:id="content" layoutX="272.0" prefHeight="750.0" prefWidth="878.0" style="-fx-background-color: #85929e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="598.0" fitWidth="890.0" layoutY="151.0">
+               <image>
+                  <Image url="@../images/professional-car-wash-1.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="152.0" prefWidth="890.0" style="-fx-background-color: #44a5fb;">
+               <children>
+                      <Label prefHeight="150.0" prefWidth="890.0" text="            Wash &amp; Go" textFill="WHITE" VBox.vgrow="ALWAYS">
+                          <font>
+                              <Font name="Bodoni MT Black" size="66.0" />
+                          </font>
+                      </Label>
+               </children>
+            </VBox>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="786.0" layoutY="159.0">
+               <image>
+                  <Image url="@../images/8742495.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="820.0" layoutY="159.0" prefHeight="30.0" prefWidth="55.0" text="keshaka" textFill="#2699dc">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Button fx:id="btnLogout" layoutX="2.0" layoutY="701.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="42.0" prefWidth="254.0" style="-fx-background-color: #ff0000;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+    </children>
+</AnchorPane>

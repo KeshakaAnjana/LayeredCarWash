@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Product" prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.ProductController">
+    <children>
+        <VBox prefHeight="707.0" prefWidth="890.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Label prefHeight="66.0" prefWidth="890.0" text="                Wash &amp; Go               " textFill="#2060ae" underline="true">
+                    <font>
+                        <Font name="Bodoni MT Black" size="55.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="282.0" prefWidth="890.0">
+                    <children>
+                        <HBox prefHeight="50.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="42.0" prefWidth="114.0" text="  Product Id  " />
+                                <Label fx:id="lblProductId" prefHeight="42.0" prefWidth="472.0" text=" 1" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="49.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="42.0" prefWidth="119.0" text="  Product Name" />
+                        <ComboBox fx:id="cmbProductName" onAction="#clickcmbProductName" prefHeight="42.0" prefWidth="281.0" promptText="Product Name" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6;" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="62.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="49.0" prefWidth="119.0" text="  Date     " />
+                        <Label fx:id="ProductDatelbl" prefHeight="53.0" prefWidth="726.0" text="2099-01-01" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="47.0" prefWidth="890.0">
+                            <children>
+                                <Label prefHeight="31.0" prefWidth="119.0" text="  Price  " />
+                        <TextField fx:id="txtPrice" prefHeight="30.0" prefWidth="720.0" promptText="Price" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6;" />
+                            </children>
+                        </HBox>
+                  <HBox prefHeight="51.0" prefWidth="890.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="119.0" text="  QTY" />
+                        <TextField fx:id="txtQTY" prefHeight="42.0" prefWidth="720.0" promptText="qty" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6;" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="116.0" prefWidth="850.0" spacing="30.0">
+                    <children>
+                        <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="27.0" prefWidth="34.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnDeleteProduct" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteProductOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnUpdateProduct" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateProductOnAction" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnSaveProduct" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveProductOnAction" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="tblProduct" onMouseClicked="#onClickTable" prefHeight="341.0" prefWidth="890.0">
+                    <columns>
+                        <TableColumn fx:id="colProductId" prefWidth="134.39999997615814" text="Product Id" />
+                        <TableColumn fx:id="colProductName" prefWidth="264.8000183105469" text="Product Name" />
+                        <TableColumn fx:id="colDate" prefWidth="183.19998168945312" text="Date" />
+                        <TableColumn fx:id="colPrice" prefWidth="169.5999755859375" text="Price" />
+                  <TableColumn fx:id="colQTY" prefWidth="135.199951171875" text="QTY" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+      <Button fx:id="btnBack" layoutX="6.0" layoutY="712.0" mnemonicParsing="false" onAction="#clickBackbtn" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <HBox layoutX="803.0" layoutY="712.0" prefHeight="31.0" prefWidth="86.0">
+         <children>
+            <Button fx:id="btnBatch" mnemonicParsing="false" onAction="#clickBatch" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #1b86f7;" text="Batch" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView disable="true" fitHeight="750.0" fitWidth="890.0" opacity="0.15">
+         <image>
+            <Image url="@../images/images%20(5).jpg" />
+         </image>
+      </ImageView>
+    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.SupplierController">
+    <children>
+        <VBox layoutX="-1.0" prefHeight="710.0" prefWidth="890.0" style="-fx-background-color: #fff;">
+            <children>
+                <Label prefHeight="66.0" prefWidth="889.0" text="                Wash &amp; Go               " textFill="#2060ae" underline="true">
+                    <font>
+                        <Font name="Bodoni MT Black" size="55.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="287.0" prefWidth="890.0">
+                    <children>
+                        <HBox prefHeight="37.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="34.0" prefWidth="130.0" text="  Supplier Id" />
+                                <Label fx:id="lblSupplierId" prefHeight="41.0" prefWidth="517.0" text="1" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="134.0" text="  Name" />
+                                <TextField fx:id="txtName" prefHeight="36.0" prefWidth="749.0" promptText="Enter Name" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="45.0" prefWidth="590.0">
+                            <children>
+                                <Label prefHeight="38.0" prefWidth="134.0" text="  Status" />
+                                <TextField fx:id="txtStatus" prefHeight="36.0" prefWidth="749.0" promptText="product Name" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                            </children>
+                        </HBox>
+                  <HBox prefHeight="47.0" prefWidth="890.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="134.0" text="  Contact no" />
+                        <TextField fx:id="txtContactNo" prefHeight="38.0" prefWidth="750.0" promptText="Contact no" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="134.0" text="  Unit Price" />
+                        <TextField fx:id="txtUnitPrice" prefHeight="36.0" prefWidth="749.0" promptText="Unit Price" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.0" prefWidth="590.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="134.0" text="  Qty" />
+                        <TextField fx:id="txtQty" prefHeight="36.0" prefWidth="749.0" promptText="QTY" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                     </children>
+                  </HBox>
+                    </children>
+                </VBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="69.0" prefWidth="890.0" spacing="30.0">
+                    <children>
+                        <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnDeleteSupplier" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteSupplierOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnUpdateSupplier" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateSupplierOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                        <Button fx:id="btnSaveSupplier" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveSupplierOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" layoutX="30.0" layoutY="200.0" prefHeight="82.0" prefWidth="890.0" spacing="30.0">
+                    <children>
+                        <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#generateAllSupplierReportOnAction" prefHeight="31.0" prefWidth="874.0" style="-fx-background-color: #4ea8f7;" text="Generate All Supplier Report" textFill="WHITE" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="Calibri Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </HBox>
+                <TableView fx:id="tblSupplier" onMouseClicked="#onClicktable" prefHeight="288.0" prefWidth="890.0">
+                    <columns>
+                        <TableColumn fx:id="colSupplierId" prefWidth="117.60003817081451" text="Supplier Id" />
+                        <TableColumn fx:id="colName" prefWidth="170.40001678466797" text="Name" />
+                        <TableColumn fx:id="colStatus" prefWidth="242.39999389648438" text="Status" />
+                  <TableColumn fx:id="colContactNo" prefWidth="156.00003051757812" text="Contact no" />
+                  <TableColumn fx:id="colUnitPrice" prefWidth="124.79998779296875" text="Unit Price" />
+                  <TableColumn fx:id="colQty" prefWidth="78.4000244140625" text="Qty" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+        <Button fx:id="btnBack" layoutX="8.0" layoutY="718.0" mnemonicParsing="false" onAction="#clickBackbtn" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+      <HBox layoutX="737.0" layoutY="718.0" prefHeight="27.0" prefWidth="147.0">
+         <children>
+            <Button fx:id="SupplierPaymentbtn" mnemonicParsing="false" onAction="#clickSupplierPayment" prefHeight="26.0" prefWidth="147.0" style="-fx-background-color: #1b86f7;" text="Supplier Payment" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView disable="true" fitHeight="750.0" fitWidth="890.0" opacity="0.15">
+         <image>
+            <Image url="@../images/images%20(5).jpg" />
+         </image>
+      </ImageView>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DEFAULT" />
+    </cursor>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="890.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ijse.gdse.carwash.controller.VehicleController">
+   <children>
+      <VBox layoutX="5.0" layoutY="7.0" prefHeight="698.0" prefWidth="878.0">
+         <children>
+            <Label prefHeight="74.0" prefWidth="874.0" text="                Wash &amp; Go              " textFill="#2060ae" underline="true">
+               <font>
+                  <Font name="Bodoni MT Black" size="55.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="214.0" prefWidth="878.0">
+               <children>
+                  <HBox prefHeight="89.0" prefWidth="878.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="86.0" text="  Vehicle Id  " />
+                        <Label fx:id="lblVehicleId" prefHeight="42.0" prefWidth="472.0" text=" 1" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="86.0" prefWidth="878.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="80.0" text="  Licance Plate " />
+                        <TextField fx:id="txtLicanceplate" prefHeight="30.0" prefWidth="791.0" promptText="Licance Plate" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="89.0" prefWidth="878.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="80.0" text="  Model     " />
+                        <TextField fx:id="txtModel" prefHeight="30.0" prefWidth="790.0" promptText="Vehicle model" style="-fx-background-color: #ffffff; -fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="79.0" prefWidth="878.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="80.0" text="  Customer Id  " />
+                        <ComboBox fx:id="cmbCustomerId" onAction="#clickcmbCustomerId" prefHeight="33.0" prefWidth="202.0" style="-fx-border-width: 0 0 1px 0; -fx-border-color: #045ae6; -fx-background-color: #ffffff;" />
+                        <Label prefHeight="30.0" prefWidth="274.0" text="                                                      customer name" />
+                        <Label fx:id="customername" prefHeight="30.0" prefWidth="313.0" style="-fx-background-color: #ffffff; -fx-border-color: #045ae6; -fx-border-width: 0 0 1px 0;" text=" name" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="116.0" prefWidth="850.0" spacing="30.0">
+               <children>
+                  <Button fx:id="btnReset" layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnResetOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Reset" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnDeleteVehicle" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteVehicleOnAction" prefWidth="80.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnUpdateVehicle" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateVehicleOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Update" textFill="WHITE" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnSaveVehicle" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveVehicleOnAction" prefWidth="80.0" style="-fx-background-color: #1b86f7;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="CLOSED_HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="tblVehicle" onMouseClicked="#onclickTable" prefHeight="361.0" prefWidth="878.0">
+              <columns>
+                <TableColumn fx:id="colVehicleId" prefWidth="207.19998788833618" text="Vehicle Id" />
+                <TableColumn fx:id="colLicancePlate" prefWidth="227.99993896484375" text="Licance Plate" />
+                  <TableColumn fx:id="colModel" prefWidth="230.39999389648438" text="Model" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="211.20001220703125" text="Customer Id" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="Backbtn" layoutX="11.0" layoutY="710.0" mnemonicParsing="false" onAction="#clickBack" style="-fx-background-color: #1b86f7;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView disable="true" fitHeight="750.0" fitWidth="890.0" opacity="0.15">
+         <image>
+            <Image url="@../images/images%20(5).jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
