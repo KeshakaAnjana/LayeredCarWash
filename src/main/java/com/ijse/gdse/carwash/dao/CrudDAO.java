@@ -5,7 +5,7 @@ import com.ijse.gdse.carwash.dto.CustomerDTO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public interface CrudDAO <T>{
+public interface CrudDAO <T> extends SuperDAO{
     String getNext() throws SQLException, ClassNotFoundException;
 
     boolean save(T DTO) throws SQLException, ClassNotFoundException;

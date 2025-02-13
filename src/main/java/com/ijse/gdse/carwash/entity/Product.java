@@ -14,4 +14,5 @@ public class Product {
     private String date;
     private String price;
     private String qty;
+
 }

@@ -3,6 +3,7 @@ package com.ijse.gdse.carwash.dao.custom.impl;
 import com.ijse.gdse.carwash.dao.SQLUtil;
 import com.ijse.gdse.carwash.dao.custom.BatchDAO;
 import com.ijse.gdse.carwash.dao.custom.ProductDAO;
+import com.ijse.gdse.carwash.dto.ProductDTO;
 import com.ijse.gdse.carwash.entity.Product;
 
 import java.sql.ResultSet;
@@ -37,6 +38,7 @@ public class ProductDAOImpl implements ProductDAO {
             return "p001";
         }
     }
+
     public boolean save(Product productDTO) throws SQLException, ClassNotFoundException {
         return SQLUtil.execute(
                 "INSERT INTO product (p_id,name,date,price,qty) VALUES (?,?,?,?,?)",
@@ -67,8 +69,14 @@ public class ProductDAOImpl implements ProductDAO {
     }
 
     @Override
-    public boolean update(Product productDTO) throws SQLException {
-        return Boolean.parseBoolean(null);
+    public boolean update(Product productDTO) throws SQLException, ClassNotFoundException {
+        return SQLUtil.execute("UPDATE product SET name=?, date=?, price=?, qty=? WHERE p_id=?",
+                productDTO.getProductName(),
+                productDTO.getDate(),
+                productDTO.getPrice(),
+                productDTO.getQty(),
+                productDTO.getProductId()
+        );
     }
 
     public boolean delete(String productId) throws SQLException, ClassNotFoundException {

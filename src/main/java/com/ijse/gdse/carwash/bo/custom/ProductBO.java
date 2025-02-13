@@ -11,7 +11,7 @@ public interface ProductBO extends SuperBO {
 
     Product findById(String selectedProductId) throws SQLException, ClassNotFoundException;
 
-    boolean update(ProductDTO DTO) throws SQLException;
+    boolean update(ProductDTO DTO) throws SQLException, ClassNotFoundException;
 
     String getNext() throws SQLException, ClassNotFoundException;
 

@@ -2,6 +2,7 @@ package com.ijse.gdse.carwash.dao.custom;
 
 import com.ijse.gdse.carwash.dao.CrudDAO;
 import com.ijse.gdse.carwash.dao.custom.impl.BatchDAOImpl;
+import com.ijse.gdse.carwash.dto.ProductDTO;
 import com.ijse.gdse.carwash.entity.Product;
 
 import java.sql.SQLException;

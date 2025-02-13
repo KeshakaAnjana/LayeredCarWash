@@ -25,7 +25,7 @@ public class ProductBOImpl implements ProductBO {
     }
 
 //    @Override
-//    public boolean update(ProductDTO DTO) throws SQLException {
+//    public boolean update(ProductDTO DTO) throws SQLException, ClassNotFoundException {
 //        return productDAO.update(new Product(DTO.getProductId(),DTO.getProductName(),DTO.getDate(),DTO.getPrice(),DTO.getQty()));
 //    }
 
@@ -54,26 +54,28 @@ public class ProductBOImpl implements ProductBO {
         return productDAO.delete(Id);
     }
 
-    public boolean update(ProductDTO productDTO) throws SQLException {
+    public boolean update(ProductDTO DTO) throws SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
 
         try {
             connection.setAutoCommit(false);
-            boolean isUpdate = SQLUtil.execute(
+            boolean isUpdate = productDAO.update(new Product(DTO.getProductId(),DTO.getProductName(),DTO.getDate(),DTO.getPrice(),DTO.getQty()));
 
-                    "UPDATE product SET name=?, date=?, price=?, qty=? WHERE p_id=?",
-                    productDTO.getProductName(),
-                    productDTO.getDate(),
-                    productDTO.getPrice(),
-                    productDTO.getQty(),
-                    productDTO.getProductId()
-            );
+//                    "UPDATE product SET name=?, date=?, price=?, qty=? WHERE p_id=?",
+//                    productDTO.getProductName(),
+//                    productDTO.getDate(),
+//                    productDTO.getPrice(),
+//                    productDTO.getQty(),
+//                    productDTO.getProductId()
+//            );
+            
             if (isUpdate) {
-                boolean isUpdateBatch = batchDAO.updateQty(productDTO.getProductId(), productDTO.getQty());
+                boolean isUpdateBatch = batchDAO.updateQty(DTO.getProductId(),DTO.getQty());
                 if (isUpdateBatch) {
                     connection.commit();
                     return true;
                 }
+            
                 connection.rollback();
                 return false;
             }
